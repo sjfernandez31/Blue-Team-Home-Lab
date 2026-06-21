@@ -7,7 +7,7 @@ A hands-on cybersecurity home lab built to simulate real-world attack and defens
 | Component | Details |
 |-----------|---------|
 | Host OS | Windows 11 Home |
-| Hypervisor | Oracle VirtualBox 7.2 |
+| Hypervisor | VMware Workstation Pro 26H1 |
 | Attacker VM | Kali Linux 2026.1 |
 | Defender VM | Windows Server 2022 |
 | Network | Internal Network (isolated) |
