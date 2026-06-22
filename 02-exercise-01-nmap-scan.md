@@ -103,9 +103,80 @@ smb-vuln-ms10-061: Could not negotiate a connection — ERROR
 4. NetBIOS on 139 could leak machine name and workgroup information
 
 ---
+## Initial Defender Investigation — What We Tried First
 
-## Defender Response
-*To be documented in next section — reviewing Windows Event Logs to see what the scan looked like from the defender side.*
+### What We Expected
+After running the Nmap scan we went to Windows Event Viewer expecting to see the attacker's IP in the Security logs immediately.
+
+### What We Actually Found
+- Event IDs 4624 (Successful Logon) and 4672 (Special Privileges) were present
+- No source IP address was visible in the 4624 events
+- No Event ID 5156 or 5157 (network connection events) were showing up at all
+
+### Why It Happened
+Windows Server 2022 does **not** enable full network connection logging by default. Basic Nmap port scans do not fully authenticate so they don't always trigger clean logon events. The default audit policy is not sufficient to catch port scan activity.
+
+### The Lesson
+**Default Windows logging will miss a port scan entirely.** A SOC analyst relying only on default settings would have no idea the scan happened. This is why hardening audit policies is a critical part of server configuration.
+
+### Fix Applied
+Enabled advanced audit logging using auditpol — documented in the Defender Response section below.
+
+## Defender Response — Windows Event Log Analysis
+
+### Step 1 — Enable Connection Logging on Windows Server
+
+Default Windows Server logging does not capture port scan activity. Run these commands in Command Prompt as Administrator:
+
+**Enable Filtering Platform Connection logging:**
+```cmd
+auditpol /set /subcategory:"Filtering Platform Connection" /success:enable /failure:enable
+```
+
+**Verify it is enabled:**
+```cmd
+auditpol /get /subcategory:"Filtering Platform Connection"
+```
+
+Result should show: Success and Failure
+
+### Step 2 — Re-run the Nmap Scan from Kali
+
+```bash
+nmap 192.168.10.20
+```
+
+### Step 3 — Check Windows Event Viewer
+
+1. Open Event Viewer on Windows Server
+2. Expand Windows Logs → Security
+3. Click Filter Current Log
+4. Filter for Event ID: 5156
+5. Look for entries showing Source Address 192.168.10.10
+
+### What We Found
+
+Event ID 5156 entries confirmed the following:
+
+| Field | Value |
+|-------|-------|
+| Event ID | 5156 |
+| Source Address | 192.168.10.10 (Kali Linux) |
+| Destination | 192.168.10.20 (Windows Server) |
+| Application | System |
+| Ports detected | 135, 138, 139, 445, 5985 |
+
+### What This Means
+- Every port Nmap probed was logged with the attacker's IP
+- A SOC analyst monitoring these logs would immediately see the scan
+- The source IP 192.168.10.10 would be flagged for investigation
+- This is how real intrusion detection works at the network level
+
+### Lessons Learned
+- Default Windows logging is NOT enough — advanced audit policies must be enabled
+- Port scans leave traces in 5156 events when proper logging is configured
+- As a defender always check the source IP on 5156 events — multiple ports from one IP in a short time = port scan
+- Enable Filtering Platform Connection logging on every Windows Server you manage
 
 ---
 
