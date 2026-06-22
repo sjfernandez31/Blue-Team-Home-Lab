@@ -1,7 +1,7 @@
 # Blue Team Home Lab
 
 ## Overview
-A hands-on cybersecurity home lab built to simulate real-world attack and defense scenarios. This lab documents my practice as a blue team defender — detecting, analyzing, containing, and responding to attacks in a controlled environment.
+A hands-on cybersecurity home lab built to simulate real-world attack and defense scenarios. This lab documents my practice as a blue team defender; detecting, analyzing, containing, and responding to attacks in a controlled environment.
 
 ## Lab Environment
 | Component | Details |
