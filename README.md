@@ -1,7 +1,7 @@
 # Blue Team Home Lab
 
 ## Overview
-A hands-on cybersecurity home lab built to simulate real-world attack and defense scenarios. This lab documents my practice as a blue team defender; detecting, analyzing, containing, and responding to attacks in a controlled environment.
+A hands-on cybersecurity home lab I built to simulate real-world attack and defense scenarios. I document my practice as a blue team defender — detecting, analyzing, containing, and responding to attacks in a controlled environment.
 
 ## Lab Environment
 | Component | Details |
@@ -10,25 +10,25 @@ A hands-on cybersecurity home lab built to simulate real-world attack and defens
 | Hypervisor | VMware Workstation Pro 26H1 |
 | Attacker VM | Kali Linux 2026.1 |
 | Defender VM | Windows Server 2022 |
-| Network | Internal Network (isolated) |
+| Network | LAN Segment (labnetwork) — isolated |
 | RAM Allocated | 4GB Kali / 4GB Windows Server |
 
 ## Objectives
 - Practice threat detection and log analysis
-- Simulate real attacks and document defender response
-- Build incident response skills using NIST framework
-- Document findings in professional incident reports
+- Simulate real attacks and document my defender response
+- Build incident response skills using the NIST framework
+- Document my findings in professional incident reports
 
-## Tools Used
+## Tools I Use
 - Kali Linux attack tools (Nmap, Metasploit, Hydra)
 - Windows Event Viewer
 - Wireshark
 - PowerShell
 
 ## Exercises
-*(Documentation added as exercises are completed)*
+- [Exercise 01 — Nmap Network Scan](02-exercise-01-nmap-scan.md) ✅
 
-## Skills Demonstrated
+## Skills I'm Demonstrating
 - Network scanning and enumeration
 - Intrusion detection
 - Incident response (Detect, Contain, Eradicate, Recover)
