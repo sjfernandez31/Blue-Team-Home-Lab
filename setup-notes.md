@@ -19,20 +19,23 @@
 ### Step 2 — Troubleshot VirtualBox issues
 - Error: E_FAIL 0x80004005
 - Cause: Windows 11 virtualization-based security (VBS) conflicting with VirtualBox
-- Commands attempted:
 
+**Command 1 — Disable Hyper-V:**
 ```bash
 bcdedit /set hypervisorlaunchtype off
 ```
 
+**Command 2 — Disable VSM:**
 ```bash
 bcdedit /set vsmlaunchtype off
 ```
 
+**Command 3 — Disable Virtual Machine Platform:**
 ```bash
 Disable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 ```
 
+**Command 4 — Disable Hyper-V All:**
 ```bash
 Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
 ```
@@ -74,8 +77,7 @@ Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
 
 ### Windows Server License Error on First Boot
 - Error: Windows cannot find Microsoft license terms
-- Fix: Removed floppy/autoinst file, manually selected
-  Windows Server 2022 Standard Evaluation (Desktop Experience) during setup
+- Fix: Removed floppy/autoinst file, manually selected Windows Server 2022 Standard Evaluation (Desktop Experience) during setup
 
 ### Kali VMware Import Error
 - Error: .vbox file is not a valid VMware configuration file
@@ -87,81 +89,103 @@ Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
 
 1. Go to kali.org/get-kali/#kali-virtual-machines
 2. Click VMware tab and download the 64-bit .7z file
-3. Extract using 7-Zip (right click → open with 7-Zip → Extract)
+3. Extract using 7-Zip (right click the file → open with 7-Zip → Extract Here)
 4. Open VMware → Open a Virtual Machine → navigate to extracted folder
 5. Select the .vmx file and click Open
-6. Edit settings: RAM 4096 MB, CPUs 2
-7. Network Adapter → LAN Segment → labnetwork
-8. Power on → login with kali/kali
-9. Open terminal and run:
+6. Click Edit virtual machine settings
+7. Set Memory to 4096 MB
+8. Set Processors to 2
+9. Click Network Adapter → LAN Segment → select labnetwork → OK
+10. Click Power on this virtual machine
+11. Login with username: kali and password: kali
+12. Right click desktop → Open Terminal
 
+**Step 1 — Update Kali:**
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
+**Step 2 — Clean up leftover files:**
 ```bash
 sudo apt autoremove -y
 ```
 
-10. Set static IP:
-
+**Step 3 — Set static IP address:**
 ```bash
 sudo ifconfig eth0 192.168.10.10 netmask 255.255.255.0 up
 ```
 
-11. Verify IP:
-
+**Step 4 — Verify IP was applied:**
 ```bash
 ip a
 ```
+Look for 192.168.10.10 next to eth0 to confirm it worked.
 
 ---
 
 ## Windows Server 2022 Setup — Step by Step
 
 1. Go to microsoft.com/en-us/evalcenter/evaluate-windows-server-2022
-2. Fill out form and download the ISO (SERVER_EVAL_x64FRE_en-us.iso)
-3. Open VMware → Create a New Virtual Machine → Typical
-4. Select the ISO file
-5. Set name: Windows-Server-2022, save to D: drive
-6. RAM: 4096 MB, CPUs: 2, Storage: 80 GB
-7. Remove Floppy from hardware settings before booting
-8. Power on → press any key to boot from ISO
-9. Select: Windows Server 2022 Standard Evaluation (Desktop Experience)
-10. Complete installation and set Administrator password
-11. Network Adapter → LAN Segment → labnetwork
-12. Set static IP:
-    - Start → type ncpa.cpl → Enter
-    - Right click adapter → Properties
-    - IPv4 → Use following IP:
-      - IP: 192.168.10.20
-      - Subnet: 255.255.255.0
-13. Turn off Windows Firewall for lab use:
-    - Start → Windows Defender Firewall
-    - Turn off for private and public networks
+2. Fill out the form and download the ISO file (SERVER_EVAL_x64FRE_en-us.iso)
+3. Open VMware → Create a New Virtual Machine → select Typical → Next
+4. Select Installer disc image file and browse to the ISO → Next
+5. Leave product key blank, set name to Windows-Server-2022, save to D: drive → Next
+6. Set disk size to 80 GB → Store virtual disk as a single file → Next
+7. Click Customize Hardware
+8. Set Memory to 4096 MB
+9. Set Processors to 2
+10. Click Finish
+11. Before booting: click Edit virtual machine settings → select Floppy → click Remove → OK
+12. Click Power on this virtual machine
+13. Immediately click inside the VM window and press any key to boot from ISO
+14. Select: Windows Server 2022 Standard Evaluation (Desktop Experience)
+15. Accept license terms → Custom install → select the disk → Next
+16. Wait for installation to complete and set Administrator password
+17. Login with password you set
+18. Click Edit virtual machine settings → Network Adapter → LAN Segment → select labnetwork → OK
+19. Inside Windows Server: click Start → type ncpa.cpl → press Enter
+20. Right click the network adapter → Properties
+21. Double click Internet Protocol Version 4 (TCP/IPv4)
+22. Select Use the following IP address and enter:
+
+```
+IP address:    192.168.10.20
+Subnet mask:   255.255.255.0
+Default gateway: (leave blank)
+```
+
+23. Click OK → OK
+24. Turn off Windows Firewall:
+    - Click Start → search Windows Defender Firewall → open it
+    - Click Turn Windows Defender Firewall on or off
+    - Turn off for both Private and Public networks
+    - Click OK
 
 ---
 
 ## Network Verification
 
-After both VMs are configured, test connectivity from Kali:
+After both VMs are configured, go to Kali terminal and run:
 
+**Test connectivity to Windows Server:**
 ```bash
 ping 192.168.10.20
 ```
 
-Successful replies confirm Kali and Windows Server can communicate.
+If you see replies coming back — both VMs are connected and the lab is ready.
+
+Press Ctrl + C to stop the ping.
 
 ---
 
 ## Commands Reference
 
-| Command | Purpose |
-|---------|---------|
-| `sudo apt update && sudo apt upgrade -y` | Update Kali Linux |
-| `sudo apt autoremove -y` | Clean up after update |
+| Command | What It Does |
+|---------|-------------|
+| `sudo apt update && sudo apt upgrade -y` | Update all Kali packages |
+| `sudo apt autoremove -y` | Remove leftover install files |
 | `sudo ifconfig eth0 192.168.10.10 netmask 255.255.255.0 up` | Set Kali static IP |
-| `ip a` | Verify IP address |
-| `ping 192.168.10.20` | Test connectivity to Windows Server |
-| `bcdedit /set hypervisorlaunchtype off` | Disable Hyper-V (attempted fix) |
-| `bcdedit /set vsmlaunchtype off` | Disable VSM (attempted fix) |
+| `ip a` | Check current IP addresses |
+| `ping 192.168.10.20` | Test connection to Windows Server |
+| `bcdedit /set hypervisorlaunchtype off` | Disable Hyper-V boot (Windows PowerShell) |
+| `bcdedit /set vsmlaunchtype off` | Disable VSM (Windows PowerShell) |
