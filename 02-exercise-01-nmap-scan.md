@@ -103,12 +103,13 @@ smb-vuln-ms10-061: Could not negotiate a connection — ERROR
 4. NetBIOS on 139 could leak machine name and workgroup information
 
 ---
-## Initial Defender Investigation — What We Tried First
 
-### What We Expected
-After running the Nmap scan we went to Windows Event Viewer expecting to see the attacker's IP in the Security logs immediately.
+## Initial Defender Investigation — What I Tried First
 
-### What We Actually Found
+### What I Expected
+After running the Nmap scan I went to Windows Event Viewer expecting to see the attacker's IP in the Security logs immediately.
+
+### What I Actually Found
 - Event IDs 4624 (Successful Logon) and 4672 (Special Privileges) were present
 - No source IP address was visible in the 4624 events
 - No Event ID 5156 or 5157 (network connection events) were showing up at all
@@ -121,6 +122,8 @@ Windows Server 2022 does **not** enable full network connection logging by defau
 
 ### Fix Applied
 Enabled advanced audit logging using auditpol — documented in the Defender Response section below.
+
+---
 
 ## Defender Response — Windows Event Log Analysis
 
@@ -154,7 +157,7 @@ nmap 192.168.10.20
 4. Filter for Event ID: 5156
 5. Look for entries showing Source Address 192.168.10.10
 
-### What We Found
+### What I Found
 
 Event ID 5156 entries confirmed the following:
 
@@ -187,6 +190,8 @@ Event ID 5156 entries confirmed the following:
 | `nmap 192.168.10.20` | Basic port scan |
 | `nmap -sV 192.168.10.20` | Service version detection |
 | `nmap --script vuln 192.168.10.20` | Check for known vulnerabilities |
+| `auditpol /set /subcategory:"Filtering Platform Connection" /success:enable /failure:enable` | Enable connection logging on Windows Server |
+| `auditpol /get /subcategory:"Filtering Platform Connection"` | Verify logging is enabled |
 
 ---
 
@@ -195,3 +200,4 @@ Event ID 5156 entries confirmed the following:
 - SMB (445) and WinRM (5985) are high value targets on Windows machines.
 - A vulnerability scan not finding issues does not mean the system is secure — it means known exploits were not confirmed.
 - Always scan your own systems before an attacker does.
+- Default Windows Server logging is insufficient — always harden audit policies on any server you manage.
