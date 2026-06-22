@@ -7,6 +7,7 @@
 - **Kali IP:** 192.168.10.10
 - **Windows Server IP:** 192.168.10.20
 
+---
 
 ## Hypervisor Setup — What We Went Through
 
@@ -20,10 +21,21 @@
 - Cause: Windows 11 virtualization-based security (VBS) conflicting with VirtualBox
 - Commands attempted:
 
+```bash
 bcdedit /set hypervisorlaunchtype off
+```
+
+```bash
 bcdedit /set vsmlaunchtype off
+```
+
+```bash
 Disable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+```
+
+```bash
 Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
+```
 
 - Changed Paravirtualization from Hyper-V to KVM in VirtualBox settings
 - Nothing worked — Windows 11 memory integrity and VBS blocked VirtualBox
@@ -34,13 +46,14 @@ Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
 - Installed and selected personal use (free license)
 - Windows Server 2022 booted successfully on first try
 
-### Step 4 — Moved Kali to VMware too
+### Step 4 — Moved Kali to VMware
 - Originally downloaded Kali as VirtualBox .7z image
 - VirtualBox .vbox file could not be opened in VMware
 - Downloaded Kali VMware version from kali.org/get-kali/#kali-virtual-machines
 - Extracted using 7-Zip
 - Opened .vmx file in VMware successfully
 
+---
 
 ## Issues Encountered & Fixes
 
@@ -68,6 +81,7 @@ Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
 - Error: .vbox file is not a valid VMware configuration file
 - Fix: Downloaded VMware-specific Kali image (.vmx) from kali.org
 
+---
 
 ## Kali Linux Setup — Step by Step
 
@@ -81,17 +95,27 @@ Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
 8. Power on → login with kali/kali
 9. Open terminal and run:
 
+```bash
 sudo apt update && sudo apt upgrade -y
+```
+
+```bash
 sudo apt autoremove -y
+```
 
 10. Set static IP:
 
+```bash
 sudo ifconfig eth0 192.168.10.10 netmask 255.255.255.0 up
+```
 
 11. Verify IP:
 
+```bash
 ip a
+```
 
+---
 
 ## Windows Server 2022 Setup — Step by Step
 
@@ -116,23 +140,28 @@ ip a
     - Start → Windows Defender Firewall
     - Turn off for private and public networks
 
+---
+
 ## Network Verification
 
 After both VMs are configured, test connectivity from Kali:
 
+```bash
 ping 192.168.10.20
+```
 
 Successful replies confirm Kali and Windows Server can communicate.
 
+---
 
 ## Commands Reference
 
 | Command | Purpose |
 |---------|---------|
-| sudo apt update && sudo apt upgrade -y | Update Kali Linux |
-| sudo apt autoremove -y | Clean up after update |
-| sudo ifconfig eth0 192.168.10.10 netmask 255.255.255.0 up | Set Kali static IP |
-| ip a | Verify IP address |
-| ping 192.168.10.20 | Test connectivity to Windows Server |
-| bcdedit /set hypervisorlaunchtype off | Disable Hyper-V (attempted fix) |
-| bcdedit /set vsmlaunchtype off | Disable VSM (attempted fix) |
+| `sudo apt update && sudo apt upgrade -y` | Update Kali Linux |
+| `sudo apt autoremove -y` | Clean up after update |
+| `sudo ifconfig eth0 192.168.10.10 netmask 255.255.255.0 up` | Set Kali static IP |
+| `ip a` | Verify IP address |
+| `ping 192.168.10.20` | Test connectivity to Windows Server |
+| `bcdedit /set hypervisorlaunchtype off` | Disable Hyper-V (attempted fix) |
+| `bcdedit /set vsmlaunchtype off` | Disable VSM (attempted fix) |
