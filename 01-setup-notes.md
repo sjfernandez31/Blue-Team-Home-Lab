@@ -232,7 +232,7 @@ My lab environment is fully configured and operational. Kali Linux at 192.168.10
 
 | Screenshot | Description |
 |------------|-------------|
-| *(coming soon)* | VMware showing both VMs powered on |
-| *(coming soon)* | Kali terminal showing static IP 192.168.10.10 |
-| *(coming soon)* | Windows Server network adapter showing IP 192.168.10.20 |
-| *(coming soon)* | Kali terminal showing successful ping to Windows Server |
+| ![BT Lab 01-1](screenshots/BT%20Lab%2001-1.png) | VMware showing both VMs powered on |
+| ![BT Lab 01-2](screenshots/BT%20Lab%2001-2.png) | Kali terminal showing static IP 192.168.10.10 |
+| ![BT Lab 01-3](screenshots/BT%20Lab%2001-3.png) | Windows Server network adapter showing IP 192.168.10.20 |
+| ![BT Lab 01-4](screenshots/BT%20Lab%2001-4.png) | Kali terminal showing successful ping to Windows Server |
