@@ -236,8 +236,3 @@ My lab environment is fully configured and operational. Kali Linux at 192.168.10
 | ![BT Lab 01-2](screenshots/BT%20Lab%2001-2.png) | Kali terminal showing static IP 192.168.10.10 |
 | ![BT Lab 01-3](screenshots/BT%20Lab%2001-3.png) | Windows Server network adapter showing IP 192.168.10.20 |
 | ![BT Lab 01-4](screenshots/BT%20Lab%2001-4.png) | Kali terminal showing successful ping to Windows Server |
-| ![BT Lab 01-5](screenshots/BT%20Lab%2001-5.png) | Basic Nmap scan results |
-| ![BT Lab 01-6](screenshots/BT%20Lab%2001-6.png) | Version scan results |
-| ![BT Lab 01-7](screenshots/BT%20Lab%2001-7.png) | Vuln scan results |
-| ![BT Lab 01-8](screenshots/BT%20Lab%2001-8.png) | Event Viewer filtered 5156 events list |
-| ![BT Lab 01-9](screenshots/BT%20Lab%2001-9.png) | Single 5156 event showing source IP 192.168.10.10 |
