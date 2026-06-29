@@ -8,7 +8,7 @@
 ![OS](https://img.shields.io/badge/OS-Kali%20Linux%20%7C%20Windows%20Server%202022-purple?style=for-the-badge)
 ![NETWORK](https://img.shields.io/badge/NETWORK-Isolated%20LAN-orange?style=for-the-badge)
 
-*A hands-on cybersecurity home lab I built to simulate real-world attack and defense scenarios. I document my practice as a blue team defender; detecting, analyzing, containing, and responding to attacks in a controlled environment.*
+*A hands-on cybersecurity home lab I built to simulate real-world attack and defense scenarios. I document my practice as a blue team defender — detecting, analyzing, containing, and responding to attacks in a controlled environment.*
 
 </div>
 
@@ -83,10 +83,21 @@
 
 ```
 Blue-Team-Home-Lab/
-├── 01-lab-setup.md
-├── 02-nmap-scan.md
+├── 01-lab-setup.md          ✅ Complete
+├── 02-nmap-scan.md          ✅ Complete
+├── 03-hydra-brute-force.md  ⏳ Pending
+├── 04-wireshark-analysis.md ⏳ Pending
+├── 05-ad-attack-defend.md   ⏳ Pending
+├── 06-siem-wazuh.md         ⏳ Pending
 └── README.md
 ```
+
+---
+
+## 🤝 Connect
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Steven%20Fernandez-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/stevenjfernandez31)
+[![GitHub](https://img.shields.io/badge/GitHub-sjfernandez31-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sjfernandez31)
 
 ---
 
