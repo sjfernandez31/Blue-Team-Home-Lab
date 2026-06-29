@@ -3,12 +3,12 @@
 # 🛡️ BLUE TEAM HOME LAB
 
 ![STATUS](https://img.shields.io/badge/STATUS-ACTIVE-brightgreen?style=for-the-badge)
-![EXERCISES](https://img.shields.io/badge/EXERCISES-1-blue?style=for-the-badge)
+![EXERCISES](https://img.shields.io/badge/EXERCISES-2%20COMPLETE-blue?style=for-the-badge)
 ![PLATFORM](https://img.shields.io/badge/PLATFORM-VMware%20Workstation%20Pro-lightgrey?style=for-the-badge)
 ![OS](https://img.shields.io/badge/OS-Kali%20Linux%20%7C%20Windows%20Server%202022-purple?style=for-the-badge)
 ![NETWORK](https://img.shields.io/badge/NETWORK-Isolated%20LAN-orange?style=for-the-badge)
 
-*A hands-on cybersecurity home lab I built to simulate real-world attack and defense scenarios. I document my practice as a blue team defender; detecting, analyzing, containing, and responding to attacks in a controlled environment.*
+*A hands-on cybersecurity home lab I built to simulate real-world attack and defense scenarios. I document my practice as a blue team defender — detecting, analyzing, containing, and responding to attacks in a controlled environment.*
 
 </div>
 
@@ -56,11 +56,12 @@
 
 | # | Exercise | Status |
 |---|----------|--------|
-| 01 | [Nmap Network Scan](02-exercise-01-nmap-scan.md) | ✅ Complete |
-| 02 | Hydra Brute Force Attack | 🔄 In Progress |
-| 03 | Wireshark Traffic Analysis | ⏳ Pending |
-| 04 | Active Directory Attack and Defend | ⏳ Pending |
-| 05 | Home SIEM with Wazuh | ⏳ Pending |
+| 01 | [Lab Setup — Environment Configuration](01-lab-setup.md) | ✅ Complete |
+| 02 | [Nmap Network Scan](02-nmap-scan.md) | ✅ Complete |
+| 03 | Hydra Brute Force Attack | ⏳ Pending |
+| 04 | Wireshark Traffic Analysis | ⏳ Pending |
+| 05 | Active Directory Attack and Defend | ⏳ Pending |
+| 06 | Home SIEM with Wazuh | ⏳ Pending |
 
 ---
 
@@ -82,8 +83,8 @@
 
 ```
 Blue-Team-Home-Lab/
-├── 01-setup-notes.md
-├── 02-exercise-01-nmap-scan.md
+├── 01-lab-setup.md
+├── 02-nmap-scan.md
 └── README.md
 ```
 
