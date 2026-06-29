@@ -44,11 +44,14 @@
 |------|---------|
 | Nmap | Network scanning and enumeration |
 | Hydra | Brute force attack simulation |
+| Wireshark | Network traffic analysis and PCAP review |
 | Metasploit | Exploitation framework |
-| Wireshark | Network traffic analysis |
 | Windows Event Viewer | Log analysis and threat detection |
 | PowerShell | Windows administration and scripting |
 | Auditpol | Windows audit policy configuration |
+| Wazuh | Open source SIEM and XDR |
+| SigmaHQ | Detection rule writing and threat hunting |
+| Honeypot | Deception-based threat detection |
 
 ---
 
@@ -62,6 +65,10 @@
 | 04 | Wireshark Traffic Analysis | ⏳ Pending |
 | 05 | Active Directory Attack and Defend | ⏳ Pending |
 | 06 | Home SIEM with Wazuh | ⏳ Pending |
+| 07 | SigmaHQ Detection Rules | ⏳ Pending |
+| 08 | Honeypot Deployment and Analysis | ⏳ Pending |
+| 09 | PCAP Analysis | ⏳ Pending |
+| 10 | Incident Response Playbook | ⏳ Pending |
 
 ---
 
@@ -75,6 +82,9 @@
 | Incident Response | NIST framework — Detect, Contain, Eradicate, Recover |
 | Brute Force Defense | Hydra simulation, failed logon detection |
 | Traffic Analysis | Wireshark, PCAP review |
+| SIEM Operations | Wazuh log ingestion, alerting, dashboards |
+| Detection Engineering | SigmaHQ rule writing and tuning |
+| Deception Technology | Honeypot deployment and attacker tracking |
 | Documentation | GitHub, professional incident reports |
 
 ---
@@ -83,12 +93,16 @@
 
 ```
 Blue-Team-Home-Lab/
-├── 01-lab-setup.md          ✅ Complete
-├── 02-nmap-scan.md          ✅ Complete
-├── 03-hydra-brute-force.md  ⏳ Pending
-├── 04-wireshark-analysis.md ⏳ Pending
-├── 05-ad-attack-defend.md   ⏳ Pending
-├── 06-siem-wazuh.md         ⏳ Pending
+├── 01-lab-setup.md               ✅ Complete
+├── 02-nmap-scan.md               ✅ Complete
+├── 03-hydra-brute-force.md       ⏳ Pending
+├── 04-wireshark-analysis.md      ⏳ Pending
+├── 05-ad-attack-defend.md        ⏳ Pending
+├── 06-siem-wazuh.md              ⏳ Pending
+├── 07-sigmahq-rules.md           ⏳ Pending
+├── 08-honeypot.md                ⏳ Pending
+├── 09-pcap-analysis.md           ⏳ Pending
+├── 10-ir-playbook.md             ⏳ Pending
 └── README.md
 ```
 
