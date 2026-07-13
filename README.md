@@ -95,7 +95,7 @@
 Blue-Team-Home-Lab/
 ├── 01-lab-setup.md               ✅ Complete
 ├── 02-nmap-scan.md               ✅ Complete
-├── 03-hydra-brute-force.md       ⏳ Pending
+├── 03-hydra-brute-force.md       ✅ Complete
 ├── 04-wireshark-analysis.md      ⏳ Pending
 ├── 05-ad-attack-defend.md        ⏳ Pending
 ├── 06-siem-wazuh.md              ⏳ Pending
