@@ -33,7 +33,7 @@
 
 ## 📋 Background
 
-Wireshark is the industry standard tool for network packet capture and analysis. It allows a defender to see exactly what is happening on the wire — every connection attempt, every protocol handshake, and every data exchange between systems. In a SOC environment, PCAP analysis is used to investigate incidents, confirm attacker behavior, and build a detailed timeline of what happened during an attack.
+Wireshark is the industry standard tool for network packet capture and analysis. It allows a defender to see exactly what is happening on the wire, every connection attempt, every protocol handshake, and every data exchange between systems. In a SOC environment, PCAP analysis is used to investigate incidents, confirm attacker behavior, and build a detailed timeline of what happened during an attack.
 
 In this exercise I used tcpdump to capture all network traffic during a live Hydra RDP brute force attack, then loaded the capture file into Wireshark to analyze what the attack looked like on the wire. This exercise builds on Exercise 03 by showing the network-level evidence of the same attack that generated Event ID 4625 entries in the Windows Security log.
 
