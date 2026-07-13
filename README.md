@@ -61,7 +61,7 @@
 |---|----------|--------|
 | 01 | [Lab Setup — Environment Configuration](01-lab-setup.md) | ✅ Complete |
 | 02 | [Nmap Network Scan](02-nmap-scan.md) | ✅ Complete |
-| 03 | Hydra Brute Force Attack | ⏳ Pending |
+| 03 | Hydra Brute Force Attack | ✅ Complete |
 | 04 | Wireshark Traffic Analysis | ⏳ Pending |
 | 05 | Active Directory Attack and Defend | ⏳ Pending |
 | 06 | Home SIEM with Wazuh | ⏳ Pending |
