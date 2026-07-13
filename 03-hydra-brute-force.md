@@ -234,8 +234,8 @@ I successfully completed a full attack and defense cycle for RDP brute force. As
 
 | Screenshot | Description |
 |------------|-------------|
-| ![BT-Lab-03-1](screenshots/BT-Lab-03-1.png) | Kali terminal showing password list created and verified |
-| ![BT-Lab-03-2](screenshots/BT-Lab-03-2.png) | Password list with Admin123! appended at bottom |
-| ![BT-Lab-03-3](screenshots/BT-Lab-03-3.png) | Hydra output showing all attempts and successful crack |
-| ![BT-Lab-03-4](screenshots/BT-Lab-03-4.png) | Event Viewer filtered list showing 20 x Event ID 4625 failures |
-| ![BT-Lab-03-5](screenshots/BT-Lab-03-5.png) | Single 4625 event showing attacker IP 192.168.10.101 |
+| ![BT_Lab_03-1](screenshots/BT_Lab_03-1.png) | Kali terminal showing password list created and verified |
+| ![BT_Lab_03-2](screenshots/BT_Lab_03-2.png) | Password list with Admin123! appended at bottom |
+| ![BT_Lab_03-3](screenshots/BT_Lab_03-3.png) | Hydra output showing all attempts and successful crack |
+| ![BT_Lab_03-4](screenshots/BT_Lab_03-4.png) | Event Viewer filtered list showing 20 x Event ID 4625 failures |
+| ![BT_Lab_03-5](screenshots/BT_Lab_03-5.png) | Single 4625 event showing attacker IP 192.168.10.101 |
