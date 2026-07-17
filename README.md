@@ -63,7 +63,7 @@
 | 02 | [Nmap Network Scan](02-nmap-scan.md) | ✅ Complete |
 | 03 | Hydra Brute Force Attack | ✅ Complete |
 | 04 | Wireshark Traffic Analysis | ✅ Complete |
-| 05 | Active Directory Attack and Defend | ⏳ Pending |
+| 05 | Active Directory Attack and Defend | ✅ Complete |
 | 06 | Home SIEM with Wazuh | ⏳ Pending |
 | 07 | SigmaHQ Detection Rules | ⏳ Pending |
 | 08 | Honeypot Deployment and Analysis | ⏳ Pending |
@@ -97,7 +97,7 @@ Blue-Team-Home-Lab/
 ├── 02-nmap-scan.md               ✅ Complete
 ├── 03-hydra-brute-force.md       ✅ Complete
 ├── 04-wireshark-analysis.md      ✅ Complete
-├── 05-ad-attack-defend.md        ⏳ Pending
+├── 05-ad-attack-defend.md        ✅ Complete
 ├── 06-siem-wazuh.md              ⏳ Pending
 ├── 07-sigmahq-rules.md           ⏳ Pending
 ├── 08-honeypot.md                ⏳ Pending
