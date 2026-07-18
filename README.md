@@ -3,7 +3,7 @@
 # 🛡️ BLUE TEAM HOME LAB
 
 ![STATUS](https://img.shields.io/badge/STATUS-ACTIVE-brightgreen?style=for-the-badge)
-![EXERCISES](https://img.shields.io/badge/EXERCISES-5%20COMPLETE-blue?style=for-the-badge)
+![EXERCISES](https://img.shields.io/badge/EXERCISES-6%20COMPLETE-blue?style=for-the-badge)
 ![PLATFORM](https://img.shields.io/badge/PLATFORM-VMware%20Workstation%20Pro-lightgrey?style=for-the-badge)
 ![OS](https://img.shields.io/badge/OS-Kali%20Linux%20%7C%20Windows%20Server%202022-purple?style=for-the-badge)
 ![NETWORK](https://img.shields.io/badge/NETWORK-Isolated%20LAN-orange?style=for-the-badge)
@@ -64,7 +64,7 @@
 | 03 | Hydra Brute Force Attack | ✅ Complete |
 | 04 | Wireshark Traffic Analysis | ✅ Complete |
 | 05 | Active Directory Attack and Defend | ✅ Complete |
-| 06 | Home SIEM with Wazuh | ⏳ Pending |
+| 06 | Home SIEM with Wazuh | ✅ Complete |
 | 07 | SigmaHQ Detection Rules | ⏳ Pending |
 | 08 | Honeypot Deployment and Analysis | ⏳ Pending |
 | 09 | PCAP Analysis | ⏳ Pending |
@@ -98,7 +98,7 @@ Blue-Team-Home-Lab/
 ├── 03-hydra-brute-force.md       ✅ Complete
 ├── 04-wireshark-analysis.md      ✅ Complete
 ├── 05-ad-attack-defend.md        ✅ Complete
-├── 06-siem-wazuh.md              ⏳ Pending
+├── 06-siem-wazuh.md              ✅ Complete
 ├── 07-sigmahq-rules.md           ⏳ Pending
 ├── 08-honeypot.md                ⏳ Pending
 ├── 09-pcap-analysis.md           ⏳ Pending
