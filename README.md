@@ -23,7 +23,7 @@
 | Attacker VM | Kali Linux 2026.1 |
 | Defender VM | Windows Server 2022 Standard |
 | Network | LAN Segment (labnetwork) — isolated, no internet access |
-| Attacker IP | 192.168.10.10 |
+| Attacker IP | 192.168.10.101 |
 | Defender IP | 192.168.10.20 |
 | RAM Allocated | 4GB Kali / 4GB Windows Server |
 
@@ -45,7 +45,8 @@
 | Nmap | Network scanning and enumeration |
 | Hydra | Brute force attack simulation |
 | Wireshark | Network traffic analysis and PCAP review |
-| Metasploit | Exploitation framework |
+| netexec | SMB credential testing and AD enumeration |
+| enum4linux | Active Directory domain enumeration |
 | Windows Event Viewer | Log analysis and threat detection |
 | PowerShell | Windows administration and scripting |
 | Auditpol | Windows audit policy configuration |
@@ -61,12 +62,12 @@
 |---|----------|--------|
 | 01 | [Lab Setup — Environment Configuration](01-lab-setup.md) | ✅ Complete |
 | 02 | [Nmap Network Scan](02-nmap-scan.md) | ✅ Complete |
-| 03 | Hydra Brute Force Attack | ✅ Complete |
-| 04 | Wireshark Traffic Analysis | ✅ Complete |
-| 05 | Active Directory Attack and Defend | ✅ Complete |
-| 06 | Home SIEM with Wazuh | ✅ Complete |
-| 07 | SigmaHQ Detection Rules | ✅ Complete |
-| 08 | Honeypot Deployment and Analysis | ✅ Complete |
+| 03 | [Hydra Brute Force Attack](03-hydra-brute-force.md) | ✅ Complete |
+| 04 | [Wireshark Traffic Analysis](04-wireshark-analysis.md) | ✅ Complete |
+| 05 | [Active Directory Attack and Defend](05-ad-attack-defend.md) | ✅ Complete |
+| 06 | [Home SIEM with Wazuh](06-siem-wazuh.md) | ✅ Complete |
+| 07 | [SigmaHQ Detection Rules](07-sigmahq-rules.md) | ✅ Complete |
+| 08 | [Honeypot Deployment and Analysis](08-honeypot.md) | ✅ Complete |
 | 09 | PCAP Analysis | ⏳ Pending |
 | 10 | Incident Response Playbook | ⏳ Pending |
 
@@ -85,6 +86,7 @@
 | SIEM Operations | Wazuh log ingestion, alerting, dashboards |
 | Detection Engineering | SigmaHQ rule writing and tuning |
 | Deception Technology | Honeypot deployment and attacker tracking |
+| AD Attack and Defense | enum4linux, netexec, account lockout analysis |
 | Documentation | GitHub, professional incident reports |
 
 ---
@@ -114,6 +116,12 @@ Blue-Team-Home-Lab/
 [![GitHub](https://img.shields.io/badge/GitHub-sjfernandez31-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sjfernandez31)
 
 ---
+
+<div align="center">
+
+*Built and maintained by Steven Fernandez — github.com/sjfernandez31*
+
+</div>
 
 <div align="center">
 
