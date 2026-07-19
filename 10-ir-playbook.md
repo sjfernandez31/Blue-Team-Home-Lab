@@ -306,7 +306,58 @@ This incident response report draws on evidence and findings from across the ent
 
 ---
 
-## 📸 Screenshots
+## 📄 Clean Report Format
+
+The following is this incident report written in plain professional format — no markdown, no badges, no GitHub styling. This is how the same report would look as a formal document submitted to a manager, CISO, or client.
+
+---
+
+# INCIDENT RESPONSE REPORT
+## INC-2026-001 — RDP Brute Force Attack Against Domain Controller
+
+**Incident ID:** INC-2026-001
+**Severity:** High
+**Status:** Resolved
+**Date Detected:** July 12, 2026
+**Affected System:** WIN-V1LIVRSI0HI.support.local (192.168.10.20)
+**Attacker IP:** 192.168.10.101
+**Analyst:** Steven Fernandez
+
+---
+
+**Background**
+
+On July 12, 2026 at 5:27 PM, a brute force attack was detected against the Remote Desktop Protocol service on the domain controller WIN-V1LIVRSI0HI. The attack originated from 192.168.10.101 and used an automated credential testing tool to attempt multiple passwords against the Administrator account in rapid succession. The attack was detected through Windows Security Event Log monitoring and confirmed through forensic analysis of network traffic captured during the incident.
+
+**Detection**
+
+Twenty Event ID 4625 failed logon attempts were logged against the Administrator account within a 30 second window, all from the same source IP. Twenty failed logons from one IP in 30 seconds is not a user mistyping their password. That is a tool. Network packet capture confirmed 323 packets were exchanged during the attack, 76.5% of which were RDP traffic on port 3389. Fourteen separate TCP streams were identified, each representing a new connection attempt, with rapid TCP reset packets between each one, the network signature of an automated brute force utility.
+
+**Root Cause**
+
+Two factors enabled this attack. First, RDP was accessible from any IP on the network segment with no firewall restriction limiting which systems could initiate connections to the domain controller. Second, the Administrator password was short enough to appear in a common password wordlist, meaning a 12-entry wordlist was sufficient to crack it.
+
+**Containment**
+
+The attacker IP was identified from Event ID 4625 log entries and the packet capture. All log entries and forensic evidence were preserved before any clearing could occur. The existing account lockout policy served as an automatic containment mechanism during a subsequent attack, locking the jsmith account after 10 failed attempts and preventing further credential testing.
+
+**Eradication**
+
+The Administrator password was changed to a long randomly generated credential not present in any known wordlist. The jsmith account password was also reset and the account was verified to be unlocked. RDP access was restricted and the attack surface was reduced.
+
+**Recovery**
+
+Both affected accounts were verified as secure and accessible with correct credentials. The Wazuh SIEM agent was confirmed still connected and forwarding events. Network connectivity between systems was verified normal.
+
+**Recommendations**
+
+RDP should be restricted to approved administrator IPs only via firewall rule. A SIEM alert should be configured to trigger on five or more failed logons from the same IP within 60 seconds, catching attacks before the lockout threshold is reached. All privileged accounts should enforce a minimum 20 character randomly generated password. Multi-factor authentication should be implemented for all remote access connections.
+
+**Lessons Learned**
+
+The account lockout policy automatically stopped the second attack before credentials were found, which shows that basic hardening controls work. However the first attack succeeded because the same protections were not applied consistently. The most important takeaway is that logging, SIEM, and detection rules need to be in place and tested before an attacker arrives, not after.
+
+---
 
 | Screenshot | Description |
 |------------|-------------|
