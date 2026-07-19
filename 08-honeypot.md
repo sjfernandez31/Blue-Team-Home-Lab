@@ -8,7 +8,7 @@
 ![ATTACKER](https://img.shields.io/badge/ATTACKER-Kali_Linux-purple?style=for-the-badge)
 ![DEFENDER](https://img.shields.io/badge/DEFENDER-Windows_Server_2022-0078D4?style=for-the-badge)
 
-</div>
+</div> 
 
 ---
 
