@@ -3,7 +3,6 @@
 # 🛡️ BLUE TEAM HOME LAB
 
 ![STATUS](https://img.shields.io/badge/STATUS-ACTIVE-brightgreen?style=for-the-badge)
-![EXERCISES](https://img.shields.io/badge/Exercises-8_Complete-blue?style=for-the-badge&cache=0)
 ![PLATFORM](https://img.shields.io/badge/PLATFORM-VMware%20Workstation%20Pro-lightgrey?style=for-the-badge)
 ![OS](https://img.shields.io/badge/OS-Kali%20Linux%20%7C%20Windows%20Server%202022-purple?style=for-the-badge)
 ![NETWORK](https://img.shields.io/badge/NETWORK-Isolated%20LAN-orange?style=for-the-badge)
