@@ -4,9 +4,9 @@
 
 ![STATUS](https://img.shields.io/badge/STATUS-COMPLETE-brightgreen?style=for-the-badge)
 ![EXERCISE](https://img.shields.io/badge/EXERCISE-08-blue?style=for-the-badge)
-![TOOL](https://img.shields.io/badge/TOOL-PowerShell%20TCP%20Listener-5391FE?style=for-the-badge)
-![ATTACKER](https://img.shields.io/badge/ATTACKER-Kali%20Linux-purple?style=for-the-badge)
-![DEFENDER](https://img.shields.io/badge/DEFENDER-Windows%20Server%202022-0078D4?style=for-the-badge)
+![TOOL](https://img.shields.io/badge/TOOL-PowerShell_Listener-5391FE?style=for-the-badge)
+![ATTACKER](https://img.shields.io/badge/ATTACKER-Kali_Linux-purple?style=for-the-badge)
+![DEFENDER](https://img.shields.io/badge/DEFENDER-Windows_Server_2022-0078D4?style=for-the-badge)
 
 </div>
 
