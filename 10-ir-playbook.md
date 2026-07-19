@@ -359,12 +359,18 @@ The account lockout policy automatically stopped the second attack before creden
 
 ---
 
-| Screenshot | Description |
-|------------|-------------|
-| See Exercise 03 | Event ID 4625 failed logon evidence |
-| See Exercise 04 | Initial PCAP analysis and Wireshark filters |
-| See Exercise 05 | Event ID 4740 account lockout evidence |
-| See Exercise 06 | Wazuh SIEM alerts for brute force and reconnaissance |
-| See Exercise 07 | Sigma detection rules covering this incident |
-| See Exercise 08 | Honeypot reconnaissance capture |
-| See Exercise 09 | Deep forensic PCAP analysis and attack timeline |
+## 📁 Evidence References
+
+All evidence collected during this incident is documented and preserved across the Blue Team Home Lab exercises. Each link below takes you directly to the relevant documentation and screenshots.
+
+| Evidence | Source | Link |
+|----------|--------|------|
+| Event ID 4625 — 20 failed logon attempts | Exercise 03 | [Hydra Brute Force Attack](03-hydra-brute-force.md) |
+| Attacker IP captured in Security log | Exercise 03 | [Hydra Brute Force Attack](03-hydra-brute-force.md) |
+| PCAP capture — 323 packets, 14 TCP streams | Exercise 04 | [Wireshark Traffic Analysis](04-wireshark-analysis.md) |
+| Event ID 4740 — jsmith account lockout | Exercise 05 | [Active Directory Attack and Defend](05-ad-attack-defend.md) |
+| enum4linux domain enumeration | Exercise 05 | [Active Directory Attack and Defend](05-ad-attack-defend.md) |
+| Wazuh SIEM real-time brute force alerts | Exercise 06 | [Home SIEM with Wazuh](06-siem-wazuh.md) |
+| Sigma detection rules for this attack | Exercise 07 | [SigmaHQ Detection Rules](07-sigmahq-rules.md) |
+| Honeypot reconnaissance capture | Exercise 08 | [Honeypot Deployment and Analysis](08-honeypot.md) |
+| Deep forensic PCAP analysis and timeline | Exercise 09 | [PCAP Analysis](09-pcap-analysis.md) |
