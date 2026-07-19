@@ -3,7 +3,7 @@
 # 🛡️ BLUE TEAM HOME LAB
 
 ![STATUS](https://img.shields.io/badge/STATUS-ACTIVE-brightgreen?style=for-the-badge)
-![EXERCISES](https://img.shields.io/badge/EXERCISES-8%20COMPLETE-informational?style=for-the-badge)
+![EXERCISES](https://img.shields.io/badge/EXERCISES-10%20COMPLETE-informational?style=for-the-badge)
 ![PLATFORM](https://img.shields.io/badge/PLATFORM-VMware%20Workstation%20Pro-lightgrey?style=for-the-badge)
 ![OS](https://img.shields.io/badge/OS-Kali%20Linux%20%7C%20Windows%20Server%202022-purple?style=for-the-badge)
 ![NETWORK](https://img.shields.io/badge/NETWORK-Isolated%20LAN-orange?style=for-the-badge)
@@ -68,8 +68,8 @@
 | 06 | [Home SIEM with Wazuh](06-siem-wazuh.md) | ✅ Complete |
 | 07 | [SigmaHQ Detection Rules](07-sigmahq-rules.md) | ✅ Complete |
 | 08 | [Honeypot Deployment and Analysis](08-honeypot.md) | ✅ Complete |
-| 09 | PCAP Analysis | ⏳ Pending |
-| 10 | Incident Response Playbook | ⏳ Pending |
+| 09 | PCAP Analysis | ✅ Complete |
+| 10 | Incident Response Playbook | ✅ Complete |
 
 ---
 
@@ -103,8 +103,8 @@ Blue-Team-Home-Lab/
 ├── 06-siem-wazuh.md              ✅ Complete
 ├── 07-sigmahq-rules.md           ✅ Complete
 ├── 08-honeypot.md                ✅ Complete
-├── 09-pcap-analysis.md           ⏳ Pending
-├── 10-ir-playbook.md             ⏳ Pending
+├── 09-pcap-analysis.md           ✅ Complete
+├── 10-ir-playbook.md             ✅ Complete
 └── README.md
 ```
 
