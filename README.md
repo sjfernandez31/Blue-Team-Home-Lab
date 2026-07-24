@@ -2,11 +2,11 @@
 
 # 🛡️ BLUE TEAM HOME LAB
 
-![STATUS](https://img.shields.io/badge/STATUS-ACTIVE-brightgreen?style=for-the-badge)
-![EXERCISES](https://img.shields.io/badge/EXERCISES-10%20COMPLETE-informational?style=for-the-badge)
-![PLATFORM](https://img.shields.io/badge/PLATFORM-VMware%20Workstation%20Pro-lightgrey?style=for-the-badge)
-![OS](https://img.shields.io/badge/OS-Kali%20Linux%20%7C%20Windows%20Server%202022-purple?style=for-the-badge)
-![NETWORK](https://img.shields.io/badge/NETWORK-Isolated%20LAN-orange?style=for-the-badge)
+![STATUS](https://img.shields.io/badge/STATUS-ACTIVE-brightgreen?style=for-the-badge&v=2)
+![EXERCISES](https://img.shields.io/badge/EXERCISES-10_COMPLETE-informational?style=for-the-badge&v=2)
+![PLATFORM](https://img.shields.io/badge/PLATFORM-VMware%20Workstation%20Pro-lightgrey?style=for-the-badge&v=2)
+![OS](https://img.shields.io/badge/OS-Kali%20Linux%20%7C%20Windows%20Server%202022-purple?style=for-the-badge&v=2)
+![NETWORK](https://img.shields.io/badge/NETWORK-Isolated%20LAN-orange?style=for-the-badge&v=2)
 
 *A hands-on cybersecurity home lab I built to simulate real-world attack and defense scenarios. I document my practice as a blue team defender — detecting, analyzing, containing, and responding to attacks in a controlled environment.*
 
@@ -53,6 +53,8 @@
 | Wazuh | Open source SIEM and XDR |
 | SigmaHQ | Detection rule writing and threat hunting |
 | Honeypot | Deception-based threat detection |
+| Email Header Analyzer | Phishing email investigation |
+| OpenVAS / Nmap NSE | Vulnerability scanning and reporting |
 
 ---
 
@@ -68,8 +70,10 @@
 | 06 | [Home SIEM with Wazuh](06-siem-wazuh.md) | ✅ Complete |
 | 07 | [SigmaHQ Detection Rules](07-sigmahq-rules.md) | ✅ Complete |
 | 08 | [Honeypot Deployment and Analysis](08-honeypot.md) | ✅ Complete |
-| 09 | PCAP Analysis | ✅ Complete |
-| 10 | Incident Response Playbook | ✅ Complete |
+| 09 | [PCAP Analysis](09-pcap-analysis.md) | ✅ Complete |
+| 10 | [Incident Response Playbook](10-ir-playbook.md) | ✅ Complete |
+| 11 | Phishing Email Analysis | ⏳ Pending |
+| 12 | Vulnerability Scan and Report | ⏳ Pending |
 
 ---
 
@@ -87,6 +91,8 @@
 | Detection Engineering | SigmaHQ rule writing and tuning |
 | Deception Technology | Honeypot deployment and attacker tracking |
 | AD Attack and Defense | enum4linux, netexec, account lockout analysis |
+| Phishing Analysis | Email header investigation, IOC identification |
+| Vulnerability Management | OpenVAS, Nmap NSE, professional report writing |
 | Documentation | GitHub, professional incident reports |
 
 ---
@@ -105,6 +111,8 @@ Blue-Team-Home-Lab/
 ├── 08-honeypot.md                ✅ Complete
 ├── 09-pcap-analysis.md           ✅ Complete
 ├── 10-ir-playbook.md             ✅ Complete
+├── 11-phishing-analysis.md       ⏳ Pending
+├── 12-vuln-scan-report.md        ⏳ Pending
 └── README.md
 ```
 
@@ -112,8 +120,8 @@ Blue-Team-Home-Lab/
 
 ## 🤝 Connect
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Steven%20Fernandez-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/stevenjfernandez31)
-[![GitHub](https://img.shields.io/badge/GitHub-sjfernandez31-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sjfernandez31)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Steven%20Fernandez-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&v=2)](https://www.linkedin.com/in/stevenjfernandez31)
+[![GitHub](https://img.shields.io/badge/GitHub-sjfernandez31-181717?style=for-the-badge&logo=github&logoColor=white&v=2)](https://github.com/sjfernandez31)
 
 ---
 
