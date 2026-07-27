@@ -3,7 +3,7 @@
 # 🛡️ BLUE TEAM HOME LAB
 
 ![STATUS](https://img.shields.io/badge/STATUS-ACTIVE-brightgreen?style=for-the-badge&v=2)
-![EXERCISES](https://img.shields.io/badge/EXERCISES-10_COMPLETE-informational?style=for-the-badge&v=2)
+![EXERCISES](https://img.shields.io/badge/EXERCISES-11_COMPLETE-informational?style=for-the-badge&v=2)
 ![PLATFORM](https://img.shields.io/badge/PLATFORM-VMware%20Workstation%20Pro-lightgrey?style=for-the-badge&v=2)
 ![OS](https://img.shields.io/badge/OS-Kali%20Linux%20%7C%20Windows%20Server%202022-purple?style=for-the-badge&v=2)
 ![NETWORK](https://img.shields.io/badge/NETWORK-Isolated%20LAN-orange?style=for-the-badge&v=2)
@@ -72,7 +72,7 @@
 | 08 | [Honeypot Deployment and Analysis](08-honeypot.md) | ✅ Complete |
 | 09 | [PCAP Analysis](09-pcap-analysis.md) | ✅ Complete |
 | 10 | [Incident Response Playbook](10-ir-playbook.md) | ✅ Complete |
-| 11 | Phishing Email Analysis | ⏳ Pending |
+| 11 | Phishing Email Analysis | ✅ Complete |
 | 12 | Vulnerability Scan and Report | ⏳ Pending |
 
 ---
@@ -111,7 +111,7 @@ Blue-Team-Home-Lab/
 ├── 08-honeypot.md                ✅ Complete
 ├── 09-pcap-analysis.md           ✅ Complete
 ├── 10-ir-playbook.md             ✅ Complete
-├── 11-phishing-analysis.md       ⏳ Pending
+├── 11-phishing-analysis.md       ✅ Complete
 ├── 12-vuln-scan-report.md        ⏳ Pending
 └── README.md
 ```
