@@ -72,7 +72,7 @@
 | 08 | [Honeypot Deployment and Analysis](08-honeypot.md) | ✅ Complete |
 | 09 | [PCAP Analysis](09-pcap-analysis.md) | ✅ Complete |
 | 10 | [Incident Response Playbook](10-ir-playbook.md) | ✅ Complete |
-| 11 | Phishing Email Analysis | ✅ Complete |
+| 11 | [Phishing Email Analysis](11-phishing-analysis.md) | ✅ Complete |
 | 12 | Vulnerability Scan and Report | ⏳ Pending |
 
 ---
