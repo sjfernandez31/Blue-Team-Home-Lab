@@ -99,7 +99,7 @@
 
 ## 📂 Repository Structure
 
-\`\`\`
+```
 Blue-Team-Home-Lab/
 ├── 01-lab-setup.md               ✅ Complete
 ├── 02-nmap-scan.md               ✅ Complete
@@ -114,7 +114,7 @@ Blue-Team-Home-Lab/
 ├── 11-phishing-analysis.md       ✅ Complete
 ├── 12-vuln-scan-report.md        ✅ Complete
 └── README.md
-\`\`\`
+```
 
 ---
 
